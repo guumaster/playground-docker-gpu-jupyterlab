@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  jupyter-lab:
+    container_name: jupyter-lab
+    env_file:
+    - .env
+    user: root
+    build:
+      context: .
+      args:
+        NB_USER: $NB_USER
+        NB_GID: $NB_GID
+        NB_UID: $NB_UID
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./fastai_courses:/home/$NB_USER/fastai_courses
+      - ./datasets:/home/$NB_USER/datasets
+      - ./notebooks:/home/$NB_USER/notebooks
+      - ./config/keras.json:/home/$NB_USER/.keras/keras.json
+
