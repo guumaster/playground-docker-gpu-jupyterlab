@@ -1,18 +1,17 @@
 bcolz
-ipywidgets
-jupyter_contrib_nbextensions
-jupyter_nbextensions_configurator
-jupyterhub=0.9.4
-jupyterlab=0.35.4
 keras
 matplotlib
-notebook=5.7.0
 pandas
 pillow
-rise
 scikit-learn
 tensorflow-gpu=1.12.0
 theano==0.9
 tqdm
+
+# notebooks extensions
+ipywidgets
+jupyter_contrib_nbextensions
+jupyter_nbextensions_configurator
 widgetsnbextension
 yapf
+rise
